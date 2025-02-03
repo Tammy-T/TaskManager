@@ -38,12 +38,14 @@
             this.listBoxTasks = new System.Windows.Forms.ListBox();
             this.checkBoxCompleted = new System.Windows.Forms.CheckBox();
             this.btnRemoveTask = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 46);
+            this.label1.Location = new System.Drawing.Point(30, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 15);
             this.label1.TabIndex = 0;
@@ -52,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 120);
+            this.label2.Location = new System.Drawing.Point(30, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 1;
@@ -61,7 +63,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 189);
+            this.label3.Location = new System.Drawing.Point(30, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);
             this.label3.TabIndex = 2;
@@ -69,30 +71,30 @@
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(107, 46);
+            this.txtTitle.Location = new System.Drawing.Point(103, 68);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(241, 25);
+            this.txtTitle.Size = new System.Drawing.Size(494, 25);
             this.txtTitle.TabIndex = 3;
             // 
             // txtDescription
             // 
-            this.txtDescription.Location = new System.Drawing.Point(107, 77);
+            this.txtDescription.Location = new System.Drawing.Point(103, 99);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(241, 106);
+            this.txtDescription.Size = new System.Drawing.Size(494, 86);
             this.txtDescription.TabIndex = 4;
             // 
             // dateTimePickerDueDate
             // 
             this.dateTimePickerDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDueDate.Location = new System.Drawing.Point(107, 189);
+            this.dateTimePickerDueDate.Location = new System.Drawing.Point(103, 201);
             this.dateTimePickerDueDate.Name = "dateTimePickerDueDate";
-            this.dateTimePickerDueDate.Size = new System.Drawing.Size(241, 25);
+            this.dateTimePickerDueDate.Size = new System.Drawing.Size(494, 25);
             this.dateTimePickerDueDate.TabIndex = 5;
             // 
             // btnAddTask
             // 
-            this.btnAddTask.Location = new System.Drawing.Point(373, 183);
+            this.btnAddTask.Location = new System.Drawing.Point(167, 232);
             this.btnAddTask.Name = "btnAddTask";
             this.btnAddTask.Size = new System.Drawing.Size(112, 31);
             this.btnAddTask.TabIndex = 6;
@@ -104,15 +106,16 @@
             // 
             this.listBoxTasks.FormattingEnabled = true;
             this.listBoxTasks.ItemHeight = 15;
-            this.listBoxTasks.Location = new System.Drawing.Point(37, 241);
+            this.listBoxTasks.Location = new System.Drawing.Point(37, 307);
             this.listBoxTasks.Name = "listBoxTasks";
-            this.listBoxTasks.Size = new System.Drawing.Size(564, 94);
+            this.listBoxTasks.Size = new System.Drawing.Size(564, 154);
             this.listBoxTasks.TabIndex = 7;
+            this.listBoxTasks.SelectedIndexChanged += new System.EventHandler(this.listBoxTasks_DoubleClick);
             // 
             // checkBoxCompleted
             // 
             this.checkBoxCompleted.AutoSize = true;
-            this.checkBoxCompleted.Location = new System.Drawing.Point(37, 341);
+            this.checkBoxCompleted.Location = new System.Drawing.Point(37, 467);
             this.checkBoxCompleted.Name = "checkBoxCompleted";
             this.checkBoxCompleted.Size = new System.Drawing.Size(74, 19);
             this.checkBoxCompleted.TabIndex = 8;
@@ -124,19 +127,40 @@
             // 
             this.btnRemoveTask.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRemoveTask.Location = new System.Drawing.Point(491, 183);
+            this.btnRemoveTask.Location = new System.Drawing.Point(358, 232);
             this.btnRemoveTask.Name = "btnRemoveTask";
-            this.btnRemoveTask.Size = new System.Drawing.Size(110, 31);
+            this.btnRemoveTask.Size = new System.Drawing.Size(85, 31);
             this.btnRemoveTask.TabIndex = 9;
             this.btnRemoveTask.Text = "删除任务";
             this.btnRemoveTask.UseVisualStyleBackColor = true;
             this.btnRemoveTask.Click += new System.EventHandler(this.btnRemoveTask_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 281);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 15);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "任务列表";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("宋体", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(186, 21);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(276, 37);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "个人任务管理器";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(669, 425);
+            this.ClientSize = new System.Drawing.Size(644, 506);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnRemoveTask);
             this.Controls.Add(this.checkBoxCompleted);
             this.Controls.Add(this.listBoxTasks);
@@ -167,6 +191,8 @@
         private System.Windows.Forms.ListBox listBoxTasks;
         private System.Windows.Forms.CheckBox checkBoxCompleted;
         private System.Windows.Forms.Button btnRemoveTask;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
