@@ -110,7 +110,8 @@
             this.listBoxTasks.Name = "listBoxTasks";
             this.listBoxTasks.Size = new System.Drawing.Size(564, 154);
             this.listBoxTasks.TabIndex = 7;
-            this.listBoxTasks.SelectedIndexChanged += new System.EventHandler(this.listBoxTasks_DoubleClick);
+            this.listBoxTasks.SelectedIndexChanged += new System.EventHandler(this.listBoxTasks_SelectedIndexChanged);
+            this.listBoxTasks.DoubleClick += new System.EventHandler(this.listBoxTasks_DoubleClick);
             // 
             // checkBoxCompleted
             // 
@@ -172,7 +173,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "个人任务管理器";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
